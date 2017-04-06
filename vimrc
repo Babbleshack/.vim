@@ -38,6 +38,10 @@ Plugin 'sjl/badwolf'
 "Plugin 'kien/ctrlp.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 
+"Vim Airline/Powerline MOTHERF**KER!!!
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -60,7 +64,7 @@ filetype plugin indent on    " required
 "--------------------------------
 colorscheme badwolf
 if $COLORTERM == 'gnome-terminal'
-        set t_Co=256
+set t_Co=256
 endif
 
 "Not always needed, disabled when using badwolf colours.
@@ -70,6 +74,13 @@ endif
 
 "Other configs
 "--------------------------------
+
+"--------------------------------
+"Airline config"
+"--------------------------------
+set laststatus=2
+"--------------------------------
+
 syntax enable
 
 "Number of space vim will display when reading a <tab> character
@@ -127,30 +138,40 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 "let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
+"Syntastic Settings #see help Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 "Language specific settings
 augroup configgroup
-    autocmd!
-    autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
-                \:call <SID>StripTrailingWhitespaces()
-    autocmd FileType java setlocal noexpandtab
-    autocmd FileType java setlocal list
-    autocmd FileType java setlocal listchars=tab:+\ ,eol:-
-    autocmd FileType java setlocal formatprg=par\ -w80\ -T4
-    autocmd FileType php setlocal expandtab
-    autocmd FileType php setlocal list
-    autocmd FileType php setlocal listchars=tab:+\ ,eol:-
-    autocmd FileType php setlocal formatprg=par\ -w80\ -T4
-    autocmd FileType ruby setlocal tabstop=2
-    autocmd FileType ruby setlocal shiftwidth=2
-    autocmd FileType ruby setlocal softtabstop=2
-    autocmd FileType ruby setlocal commentstring=#\ %s
-    autocmd FileType python setlocal commentstring=#\ %s
-    autocmd BufEnter *.cls setlocal filetype=java
-    autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-    autocmd BufEnter Makefile setlocal noexpandtab
-    autocmd BufEnter *.sh setlocal tabstop=2
-    autocmd BufEnter *.sh setlocal shiftwidth=2
-    autocmd BufEnter *.sh setlocal softtabstop=2
+        autocmd!
+        autocmd VimEnter * highlight clear SignColumn
+        autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
+        \:call <SID>StripTrailingWhitespaces()
+        autocmd FileType java setlocal noexpandtab
+        autocmd FileType java setlocal list
+        autocmd FileType java setlocal listchars=tab:+\ ,eol:-
+        autocmd FileType java setlocal formatprg=par\ -w80\ -T4
+        autocmd FileType php setlocal expandtab
+        autocmd FileType php setlocal list
+        autocmd FileType php setlocal listchars=tab:+\ ,eol:-
+        autocmd FileType php setlocal formatprg=par\ -w80\ -T4
+        autocmd FileType ruby setlocal tabstop=2
+        autocmd FileType ruby setlocal shiftwidth=2
+        autocmd FileType ruby setlocal softtabstop=2
+        autocmd FileType ruby setlocal commentstring=#\ %s
+        autocmd FileType python setlocal commentstring=#\ %s
+        autocmd BufEnter *.cls setlocal filetype=java
+        autocmd BufEnter *.zsh-theme setlocal filetype=zsh
+        autocmd BufEnter Makefile setlocal noexpandtab
+        autocmd BufEnter *.sh setlocal tabstop=2
+        autocmd BufEnter *.sh setlocal shiftwidth=2
+        autocmd BufEnter *.sh setlocal softtabstop=2
 augroup END
 
