@@ -56,7 +56,20 @@ filetype plugin indent on    " required
 "
 " "SOME CONFIGURATION FOR VIM"
 "
+"Colour Scheme Stuff
+"--------------------------------
 colorscheme badwolf
+if $COLORTERM == 'gnome-terminal'
+        set t_Co=256
+endif
+
+"Not always needed, disabled when using badwolf colours.
+"set background=dark
+
+"=--------(END COLOUR SCHEME STUFF)-----------------
+
+"Other configs
+"--------------------------------
 syntax enable
 
 "Number of space vim will display when reading a <tab> character
@@ -86,6 +99,12 @@ set showmatch
 "Better searching by searching whilst typing and highlighting results.
 set incsearch
 set hlsearch
+
+" Ignore case whilst searching
+set ignorecase
+
+" Smart Case Search
+set smartcase
 
 
 "Add folding support

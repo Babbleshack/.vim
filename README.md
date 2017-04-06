@@ -8,3 +8,4 @@ This project contains my vim configuration including associated plugins.
 
 # Shoutouts/Referances
 * [Doug Blacks, 'A Good Vimrc'](https://dougblack.io/words/a-good-vimrc.html)
+* [amix's, 'Ultimate Vim Configuration'](https://github.com/amix/vimrc)
