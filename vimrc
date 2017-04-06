@@ -45,6 +45,9 @@ Plugin 'vim-airline/vim-airline-themes'
 "tmuxline (Because tmux is better than screen and you know it :p)
 Plugin 'edkolev/tmuxline.vim'
 
+"Nerdtree plugin
+Plugin 'scrooloose/nerdtree'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
