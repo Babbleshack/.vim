@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/cygdrive/d/lindsay_dc/projects/babbleblog/_posts'
+let g:netrw_dirhist_2='/cygdrive/d/lindsay_dc/projects/babbleblog/_site'
+let g:netrw_dirhist_3='/cygdrive/d/lindsay_dc/projects/babbleblog'
+let g:netrw_dirhist_4='/cygdrive/d/lindsay_dc/projects/babbleblog/_posts'
+let g:netrw_dirhist_5='/cygdrive/d/lindsay_dc/projects/babbleblog'
+let g:netrw_dirhist_6='/cygdrive/d/lindsay_dc/projects/babbleblog/_drafts'
+let g:netrw_dirhist_7='/cygdrive/d/lindsay_dc/projects/babbleblog'
