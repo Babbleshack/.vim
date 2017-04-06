@@ -14,5 +14,5 @@ tags
 bundle/*
 
 #airline logs
-"ignore netrwhist
+#ignore netrwhist
 .netrwhist
